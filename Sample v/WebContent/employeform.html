@@ -1,0 +1,153 @@
+<html>
+
+  <head>
+
+
+  <script type="text/javascript" src="employeform.js"></script>
+
+<link type="text/css" rel="stylesheet" href="employeform.css"/>
+<script type="text/javascript">
+ function change(){
+  var textOne = document.getElementById("username");
+var textTwo = document.getElementById("password");
+//Get the value of textOne textbox input
+var textOneValue = textOne.value;
+ 
+var textTwoValue = textOneValue;
+//Assign the value of textOne textbox to textTwo textbox
+textTwo.value = textTwoValue;
+ }
+
+  /*var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('confirm_password').style.color = 'green';
+    document.getElementById('password').style.color = 'green';
+  }
+  else {
+    document.getElementById('password').style.color = 'red';
+    document.getElementById('confirm_password').style.color = 'red';
+    ;
+  }
+}
+
+function checkPassword() { 
+
+      var x = document.forms["EmployeeForm"]["pass"].value;
+      var y = document.forms["EmployeeForm"]["confirm_pass"].value;
+      if(x != y)
+        {
+          alert("Password and Confirm password did not match");
+          return false;
+        }
+        alert("Matched");
+        return true;
+    }*/
+</script>
+
+
+
+  </head>
+
+  <body>
+    <button onclick="document.getElementById('abc').style.display='block';">view</button>
+<div id="abc">
+<div  id="popupContact">
+
+  <form name="EmployeeForm"  action="Controller" method="post" id="form" onsubmit="return checkPassword()">
+    
+    <img id="close" src="closepop.jfif" style="background-color: #f4f7f8" onclick="document.getElementById('abc').style.display='none';" alt="Close">
+    <h2><cEnter>NEW EMPLOYEE FORM</cEnter></h2>
+  <fieldset>
+  <label for="empnumber">Employee ID</label>
+
+  <input type=text name=empnumber id="empnumber" placeholder="Enter employee id" size="30" required>
+
+  <label for="dropdown">Salutation
+
+  </label>
+     <select id = "select" name="dropdown" required>
+       <option value = "Mr">Mr</option>
+       <option value = "Ms">Ms</option>
+       <option value = "Dr">Dr</option>
+       <option value = "Mrs">Mrs</option>
+     </select>
+
+  <label for="firstname">First Name</label>
+
+  <input type="text" name="firstname" id="firstname" placeholder="Enter first name" size="30" required>
+ 
+ <label for="lastname">Last Name</label>
+
+  <input type="text" name="lastname" id="lastname" placeholder="Enter last name"size="30" required>
+
+  <label for="sex">Gender</label>
+ 
+  <input type="radio" name="sex" value="male"  required>Male</input>
+
+  <input type="radio" name="sex" value="Female" >Female</input>
+
+  <input type="radio" name="sex" value="LGBTQ" >LGBTQ</input>
+  </fieldset>
+  <fieldset>
+  <label for="personaladdress">Personal Address</label>
+
+  <input type="text" name="personaladdress" id="personaladdress" placeholder="Enter personal address"size="30" required>
+  
+  <label for="city">City</label>
+
+  <input type="text" name="city" id="city" placeholder="Enter city"size="30" required>
+
+  <label for="state">State</label>
+
+  <input type="text" name="state" id="state" placeholder="Enter state" size="30" required>
+
+  <label for="pincode">PIN Code</label>
+
+  <input type="text" name="pincode" id="pincode" pattern="[1-9][0-9]{5}" placeholder="Enter pincode"size="30" required>
+
+  <label for="ophone">Office Phone Number</label>
+
+  <input type="tel" pattern="[1-9][0-9]{9}" placeholder="Example: 9876543210" name="ophone" id="ophone" placeholder="Enter office phone no" size="30" required>
+
+  <label for="mphone">Mobile Phone Number</label>
+
+  <input type="tel" pattern="[1-9][0-9]{9}" placeholder="Example: 9876543210" name="mphone" id="mphone" placeholder="Enter mobile phone no" size="30" required>
+
+  <label for="email">Email</label>
+
+  <input type="email" name="email" id="email" placeholder="Enter email" size="30"  required>
+
+  <label for="dob">DOB</label>
+
+  <input type="date" name="dob" id="dob" placeholder="Enter date of birth" size="30" required>
+  
+  <label for="username">User Name
+
+  </label>
+  <input type="text" name="username" id="username" placeholder="Enter a username" size="30" onkeyup="change()" required>
+
+  <label for="password">Password
+
+  </label>
+    <input type="password" name="password" id="password" placeholder="Enter a password" size="30"  readonly>
+ 
+  <label for="deptnumber">Dept Number
+
+  </label>
+    <input type="text" name="deptnumber" id="deptnumber" placeholder="Enter a deptnumber" size="30" required>
+  
+  
+  <button type="submit" name="button" value="addEmployee">Submit</button>
+
+  </fieldset>
+ 
+  </form>
+  </div>
+
+</div> 
+
+
+  </body>
+
+  </html>
